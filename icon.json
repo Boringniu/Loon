@@ -67,6 +67,17 @@
     { "name": "MeituXiuXiu", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituxiuxiu.png" },
     { "name": "WeChat", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wechat.png" },
     { "name": "XiaoHongShu", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png" },
-    { "name": "Netease_Music", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png" }
+    { "name": "Netease_Music", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png" },
+    { "name": "Lock", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Lock.png" },
+    { "name": "Unlock", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png" },
+    { "name": "Star", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Star.png" },
+    { "name": "Heart", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png" },
+    { "name": "Static", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static.png" },
+    { "name": "Static_1", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png" },
+    { "name": "cursor", "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/cursor.png" },
+    { "name": "claude(1)", "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/claude(1).png" },
+    { "name": "Flower", "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Flower.png" },
+    { "name": "Kache", "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Kache.png" },
+    { "name": "Stash_02", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Stash_02.png" }
   ]
 }
