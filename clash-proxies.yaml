@@ -1,4 +1,4 @@
-#       Clash/Mihomo VMess 配置
+#      Clash/Mihomo VMess 配置
 proxies:
   - name: "美国•1-0.1"
     type: vmess
