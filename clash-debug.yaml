@@ -1,9 +1,15 @@
-port: 7890
+# Requires Mihomo / Clash Meta.  Enable System Proxy or TUN mode in the client.
+mixed-port: 7890
 socks-port: 7891
 allow-lan: false
 mode: rule
-log-level: warning
+log-level: info
 external-controller: 127.0.0.1:9090
+unified-delay: true
+tcp-concurrent: true
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
   enhanced-mode: fake-ip
@@ -18,19 +24,24 @@ dns:
   ipv6: false
   use-hosts: true
   default-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
     - 223.5.5.5
-    - 119.29.29.29
+    - 1.1.1.1
   proxy-server-nameserver:
+    - https://1.1.1.1/dns-query
     - https://dns.alidns.com/dns-query
-  nameserver-policy: null
   nameserver:
     - https://1.1.1.1/dns-query
     - https://dns.google/dns-query
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  follow-rule: null
+  respect-rules: true
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
 proxies:
   - name: 美国•1-0.1
     type: vmess
@@ -1009,7 +1020,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Stash_02.png
   - name: 自动选择
     type: url-test
-    proxies: null
+    proxies: []
     url: https://www.gstatic.com/generate_204
     interval: 300
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
@@ -1017,7 +1028,7 @@ proxy-groups:
     include-all: true
   - name: 故障转移
     type: fallback
-    proxies: null
+    proxies: []
     url: https://www.gstatic.com/generate_204
     interval: 300
     icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FallBack.png
@@ -1026,7 +1037,7 @@ proxy-groups:
     lazy: true
   - name: 负载均衡
     type: load-balance
-    proxies: null
+    proxies: []
     url: https://www.gstatic.com/generate_204
     interval: 900
     icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LoadBalance.png
@@ -1132,7 +1143,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
   - name: 香港节点
     type: url-test
-    proxies: null
+    proxies: []
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     filter: 香港|Hong Kong|HK
     include-all: true
@@ -1140,7 +1151,7 @@ proxy-groups:
     tolerance: 50
   - name: 美国节点
     type: url-test
-    proxies: null
+    proxies: []
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     filter: 美国|USA|US|America|🇺🇸
     include-all: true
@@ -1344,81 +1355,27 @@ proxy-groups:
       - DIRECT
       - REJECT
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
-rule-providers:
-  Emby:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml
-    path: "./ruleset/Emby.yaml"
-    interval: 86400
-  苹果服务:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
-    path: "./ruleset/苹果服务.yaml"
-    interval: 86400
-  OpenAI:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
-    path: "./ruleset/OpenAI.yaml"
-    interval: 86400
-  Gemini:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
-    path: "./ruleset/Gemini.yaml"
-    interval: 86400
-  Claude:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
-    path: "./ruleset/Claude.yaml"
-    interval: 86400
-  Telegram:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
-    path: "./ruleset/Telegram.yaml"
-    interval: 86400
-  YouTube:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
-    path: "./ruleset/YouTube.yaml"
-    interval: 86400
-  广告拦截:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml
-    path: "./ruleset/广告拦截.yaml"
-    interval: 86400
-  隐私防护:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml
-    path: "./ruleset/隐私防护.yaml"
-    interval: 86400
-  中国大陆:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml
-    path: "./ruleset/中国大陆.yaml"
-    interval: 86400
 rules:
+  # Keep the bootstrap path local: no remote ruleset is required at startup.
   - DOMAIN,cdn.ednovas.org,DIRECT
   - DOMAIN-KEYWORD,ednovas,云服务
   - DOMAIN,dl.google.com,云服务
-  - RULE-SET,Emby,Emby
-  - RULE-SET,苹果服务,苹果服务
-  - RULE-SET,OpenAI,ChatGPT
-  - RULE-SET,Gemini,Gemini
-  - RULE-SET,Claude,Claude
-  - RULE-SET,Telegram,Telegram
-  - RULE-SET,YouTube,YouTube
-  - RULE-SET,广告拦截,通用广告拦截
-  - RULE-SET,隐私防护,隐私防护
-  - RULE-SET,中国大陆,中国大陆流量
+  - DOMAIN-SUFFIX,openai.com,ChatGPT
+  - DOMAIN-SUFFIX,chatgpt.com,ChatGPT
+  - DOMAIN-SUFFIX,oaistatic.com,ChatGPT
+  - DOMAIN-SUFFIX,oaiusercontent.com,ChatGPT
+  - DOMAIN-SUFFIX,gemini.google.com,Gemini
+  - DOMAIN-SUFFIX,deepmind.google,Gemini
+  - DOMAIN-SUFFIX,anthropic.com,Claude
+  - DOMAIN-SUFFIX,claude.ai,Claude
+  - DOMAIN-SUFFIX,telegram.org,Telegram
+  - DOMAIN-SUFFIX,t.me,Telegram
+  - DOMAIN-SUFFIX,ytimg.com,YouTube
+  - DOMAIN-SUFFIX,youtube.com,YouTube
+  - DOMAIN-SUFFIX,youtu.be,YouTube
+  - DOMAIN-SUFFIX,googlevideo.com,YouTube
+  - DOMAIN-SUFFIX,apple.com,苹果服务
+  - DOMAIN-SUFFIX,icloud.com,苹果服务
   - DOMAIN,injections.adguard.org,DIRECT
   - DOMAIN,local.adguard.org,DIRECT
   - DOMAIN-SUFFIX,local,DIRECT
@@ -1430,4 +1387,5 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
   - IP-CIDR6,fe80::/10,DIRECT
-  - MATCH,最终兜底
+  - GEOIP,CN,中国大陆流量,no-resolve
+  - MATCH,云服务
