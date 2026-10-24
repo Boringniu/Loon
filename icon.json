@@ -40,7 +40,8 @@
     { "name": "SG", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png" },
     { "name": "JP", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png" },
     { "name": "US", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png" },
-
+    { "name": "Korea(1)", "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Korea(1).png" },
+    
     { "name": "China_Map", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png" },
     { "name": "China", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png" },
     { "name": "Hong_Kong", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png" },
