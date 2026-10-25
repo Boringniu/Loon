@@ -10,6 +10,7 @@
     { "name": "Cellular","url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Cellular.png" },
     { "name": "Auto","url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png" },
     { "name": "FallBack", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FallBack.png" },
+    { "name": "LoadBalance", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LoadBalance.png" },
     { "name": "blacklist", "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/blacklist.png" },
     { "name": "direct","url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/direct.png" },
     { "name": "Global", "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png" },
@@ -33,7 +34,8 @@
     { "name": "Area", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png" },
     { "name": "Download", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png" },
     { "name": "Speedtest", "url": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png" },
-
+    { "name": "microsoft", "url": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/microsoft.png" },
+    
     { "name": "CN", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png" },
     { "name": "HK", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png" },
     { "name": "TW", "url": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png" },
