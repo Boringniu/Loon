@@ -1,0 +1,7 @@
+name = "bark"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "TG_CACHE"
+id = "74a107b7f607432a91d612a0a4574b79"
