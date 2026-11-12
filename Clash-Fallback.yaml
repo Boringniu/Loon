@@ -11,7 +11,7 @@
 proxy-providers:
 
   Airport-1:
-    url: "https://mitce.io/modules/servers/v2Net/subscribe/?sid=947275&token=d488244f7009bf6aa7c2&app=clashforandroid"
+    url: ""
     type: http
     interval: 86400
     override:
