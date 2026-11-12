@@ -11,7 +11,7 @@
 proxy-providers:
 
   Airport-1:
-    url: ""
+    url: "🤪🤨😛😋"
     type: http
     interval: 86400
     override:
