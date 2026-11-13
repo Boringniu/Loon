@@ -166,23 +166,13 @@ proxy-groups:
   - {name: GitHub, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/github.png"}
   - {name: Telegram, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/telegram.png"}
   - {name: Twitter(X), <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/twitter.png"}
-  - {name: WhatsApp, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/whatsapp.png"}
-  - {name: Facebook, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/facebook.png"}
   - {name: YouTube, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/youtube.png"}
   - {name: TikTok, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/tiktok.png"}
-  - {name: Disney, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/disney.png"}
-  - {name: Netflix, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/netflix.png"}
-  - {name: HBO, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/hbo.png"}
   - {name: Spotify, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/spotify.png"}
-  - {name: Crypto, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/btc.png"}
-  - {name: Amazon, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/aws-light.png"}
   - {name: Apple, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/apple-light.png"}
   - {name: Microsoft, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/microsoft-icon.png"}
   - {name: Google, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/google.png"}
-  - {name: Check, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/speedtest.png"}
   - {name: 国外网站, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/rocket-earth.png"}
-  - {name: Steam, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/steam.png"}
-  - {name: Game, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/game.png"}
   - {name: 国内网站, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/China.png"}
   - {name: 漏网之鱼, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/final.png"}
 
@@ -370,7 +360,6 @@ proxy-groups:
 # ========================
 rules:
   
-  - RULE-SET,Check / Domain,Check  
   - RULE-SET,ChatGPT / Domain,ChatGPT
   - RULE-SET,Claude / Domain,ChatGPT
   - RULE-SET,Meta AI / Domain,ChatGPT
@@ -382,30 +371,12 @@ rules:
   - RULE-SET,Telegram / Domain,Telegram
   - RULE-SET,Telegram / IP,Telegram,no-resolve
   - RULE-SET,Twitter / Domain,Twitter(X)
-  - RULE-SET,WhatsApp / Domain,WhatsApp
-  - RULE-SET,Facebook / Domain,Facebook
-  - RULE-SET,Amazon / Domain,Amazon
   - RULE-SET,Apple / Domain,Apple
   - RULE-SET,Apple-CN / Domain,Apple  
   - RULE-SET,Microsoft / Domain,Microsoft
-  - RULE-SET,OKX / Domain,Crypto
-  - RULE-SET,Bybit / Domain,Crypto
-  - RULE-SET,Binance / Domain,Crypto
-  - RULE-SET,crypto_domain,Crypto
   - RULE-SET,Youtube / Domain,YouTube
   - RULE-SET,TikTok / Domain,TikTok
-  - RULE-SET,Netflix / Domain,Netflix
-  - RULE-SET,Netflix / IP,Netflix,no-resolve
-  - RULE-SET,Disney / Domain,Disney
-  - RULE-SET,HBO / Domain,HBO
   - RULE-SET,Spotify / Domain,Spotify
-  - RULE-SET,Steam / Domain,Steam
-  - RULE-SET,Epic / Domain,Game
-  - RULE-SET,EA / Domain,Game
-  - RULE-SET,Blizzard / Domain,Game
-  - RULE-SET,UBI / Domain,Game
-  - RULE-SET,PlayStation / Domain,Game
-  - RULE-SET,Nintend / Domain,Game
   - RULE-SET,Google / Domain,Google
   - RULE-SET,Google / IP,Google,no-resolve
   - RULE-SET,Proxy / Domain,国外网站
@@ -426,41 +397,20 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
-  Check / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/sev7enshare/Clash-Config/refs/heads/main/list/check.list"}
   ChatGPT / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
   Claude / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list"}
   Meta AI / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/MetaAi.list"}
-  Perplexity / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/perplexity.mrs"}
-  Copilot / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list"}
   Gemini / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list"}
   AI / Domain: {<<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.mrs"}
   GitHub / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
   Telegram / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"}  
   Telegram / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"}
   Twitter / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs"}
-  WhatsApp / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Whatsapp/Whatsapp.list"}
-  Facebook / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs"}
-  Amazon / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs"}
   Apple-CN / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs"}
   Apple / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"} 
   Microsoft / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
-  OKX / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs"}
-  Bybit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs"}
-  Binance / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
-  crypto_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-cryptocurrency.mrs" }
   TikTok / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
-  Netflix / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs"}
-  Netflix / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs"}
-  Disney / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/disney.mrs"}
-  HBO / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/hbo.mrs"}
   Spotify / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/spotify.mrs"}
-  Steam / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs"}
-  Epic / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list"}
-  EA / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.list"}
-  Blizzard / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.list"}
-  UBI / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.list"}
-  PlayStation / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PlayStation/PlayStation.list"}
-  Nintend / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list"}
   Proxy / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/list/proxy.list"}
   Globe / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list"} 
   GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
@@ -468,14 +418,10 @@ rule-providers:
   China / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
   China / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"}
   Private / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"}
-  Nvidia / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list"}
-  Crunchyroll / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list"}
-  Reddit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs"}
 
   Youtube / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}  
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
-  facebook_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/facebook.mrs" }
   twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/twitter.mrs" }
   private_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs" }
 
