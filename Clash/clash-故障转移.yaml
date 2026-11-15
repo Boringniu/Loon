@@ -1,17 +1,12 @@
 # ========================
-
 # Clash-Fallback 懒人配置-故转优化配置
-# sev7en的分享油管频道：https://www.youtube.com/@imrockwall/videos
-# sev7en电报讨论群组：https://t.me/Sev7enshare
-
 # ========================
-
 # 机场节点订阅
 
 proxy-providers:
 
   Airport-1:
-    url: "https://mitce.io/modules/servers/v2Net/subscribe/?sid=947275&token=d488244f7009bf6aa7c2&app=clashforandroid"
+    url: "🤼‍♀️⛷🏂🤼‍♂️🤼‍♀️"
     type: http
     interval: 86400
     override:
@@ -25,7 +20,7 @@ proxy-providers:
     proxy: 直连 
     
   Airport-2:
-    url: "https://boringniu.cc.cd/sub?token=5918bc7b13513c1f4ae776cf3d270948&clash"
+    url: "🎱🎱🎱🎱🎱"
     type: http
     interval: 86400
     override:
